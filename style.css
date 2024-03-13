@@ -1,0 +1,285 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+@font-face {
+    font-family: 'Avenir';
+    src: url("./assets/avenir_roman_12.otf");
+}
+
+@font-face {
+    font-family: 'ITC Avant Garde Gothic Pro';
+    src: url("./assets/ITC\ Avant\ Garde\ Gothic\ Pro-Bold.otf");
+}
+
+::-webkit-scrollbar {
+    display: none;
+}
+
+body {
+    background-color: gray;
+    overflow: hidden;
+}
+
+.section {
+    display: flex;
+    position: absolute;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    top: 0;
+    margin: auto;
+    width: 1440px;
+    height: 864px;
+    font-family: Avenir, sans-serif;
+    background-color: #fff;
+}
+
+.section .image img {
+    width: 720px;
+    height: 864px;
+}
+
+.section .content {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    width: 720px;
+    overflow: hidden;
+    position: relative;
+
+}
+.section .content .next__icon{
+    position: absolute;
+    border: 1px solid #0000001A;
+    padding: 8px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    top: 571px;
+    left: 612px;
+    z-index: 999;
+}
+.section .content .content__top {
+    padding: 96px 120px 0px 96px;
+    margin-bottom: 68px;
+
+}
+
+.section .content .content__top .content__title {
+    width: 494px;
+    font-size: 32px;
+    font-weight: 900;
+    margin-bottom: 12px;
+    font-family: ITC Avant Garde Gothic Pro, sans-serif;
+
+}
+
+.section .content .content__top .responsive__content__title {
+    display: none;
+}
+
+.section .content .content__top .content__description {
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 25.6px;
+    color: #666666;
+    width: 432px;
+    margin-bottom: 32px;
+}
+
+.section .content .content__top .content__button {
+    width: 146px;
+    height: 23px;
+    border: none;
+    border-bottom: 1px solid #000;
+    outline: none;
+    background-color: transparent;
+    font-family: Avenir, sans-serif;
+    font-weight: 900;
+    font-size: 12.8px;
+}
+
+.section .content .content__card {
+    display: flex;
+    gap: 32px;
+    width: 906px;
+    overflow-x: scroll;
+    padding: 0 200px 0 96px;
+    position: relative;
+}
+
+.section .content .content__card .card {
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+}
+
+.section .content .content__card .card img {
+    width: 230px;
+    height: 310px;
+}
+
+.section .content .content__card .card .card__detail {
+    display: flex;
+    flex-direction: column;
+}
+
+
+.section .content .content__card .card .card__detail p {
+    font-size: 13px;
+    font-weight: 400;
+    margin-bottom: 4px;
+}
+
+
+
+.section .content .content__card .card .card__detail .card__price {
+    display: flex;
+    justify-content: space-between;
+}
+
+.section .content .content__card .card .card__detail .card__price p:first-child {
+    font-weight: 700;
+}
+
+.section .content .content__card .card .card__detail .card__color {
+    display: flex;
+    gap: 9px;
+}
+
+.section .content .content__card .card .card__detail .card__color span {
+    width: 12px;
+    height: 12px;
+    border-radius: 999px;
+}
+
+.section .content .content__card .card .card__detail .card__color .active {
+    border: 1px solid #000;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.section .content .content__card .card .card__detail .card__color .active span{
+    width: 8px;
+    height: 8px;
+    background-color: #99C3CC;
+}
+
+
+.section .content .content__card .card .card__detail .card__color span:nth-child(2) {
+    background-color: #CC9999;
+}
+
+.section .content .content__card .card .card__detail .card__color span:nth-child(3) {
+    background-color: #CB99CC;
+}
+
+.section .content .content__card .card .card__detail .card__color span:nth-child(4) {
+    background-color: #A6CC99;
+}
+
+
+.section .content .content__card .card .card__detail .responsive__card__title{
+    display: none;
+}
+
+
+@media screen and (max-width:360px) {
+    body {
+        background-color: #fff;
+    }
+
+    .section {
+        display: flex;
+        flex-direction: column;
+        position: relative;
+        width: 100%;
+        height: 100%;
+    }
+
+    .section .image img {
+        width: 360px;
+        height: 437px;
+    }
+
+    .section .content {
+        gap: 0;
+        width: 100%;
+        position: absolute;
+        top: 248px;
+    }
+
+    .section .content .content__top {
+        padding: 24px;
+        position: relative;
+    }
+
+    .section .responsive__bg {
+        background: linear-gradient(180deg, rgba(0, 0, 0, 0) 0%, #000000 78.65%);
+        width: 360px;
+        height: 218px;
+        position: absolute;
+        opacity: 50%;
+        padding: 0;
+        top: 219px;
+    }
+
+    .section .content .content__top .responsive__content__title {
+        display: block;
+        margin-bottom: 16px;
+        font-family: ITC Avant Garde Gothic Pro, sans-serif;
+        font-size: 20px;
+        color: #fff;
+        width: 312px;
+        font-weight: 700;
+    }
+
+    .section .content .content__top .content__title {
+        display: none;
+
+    }
+
+    .section .content .content__top .content__description {
+        display: none;
+    }
+
+    .section .content .content__top .content__button {
+        color: #fff;
+        border-bottom-color: #fff;
+        margin-bottom: 0;
+        font-weight: 400;
+    }
+
+    .section .content .content__card {
+        padding: 0 24px;
+        gap: 12px;
+        width: 100%;
+    }
+
+    .section .content .content__card .card img {
+        width: 148px;
+        height: 200px;
+    }
+
+    .section .content .content__card .card .card__detail .card__price {
+        flex-direction: column;
+    }
+
+    .section .content .content__card .card .card__detail .responsive__card__title {
+        display: block;
+        font-size: 13px;
+        font-weight: 400;
+        margin-bottom: 4px;
+    }
+    .section .content .content__card .card .card__detail .card__title {
+        display: none;
+    }
+    .section .content .content__card .card .card__detail .card__price p {
+        font-weight: 700;
+        margin-bottom: 8px;
+    }
+}
