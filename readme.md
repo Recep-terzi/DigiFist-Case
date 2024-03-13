@@ -7,6 +7,8 @@
 * Instead of using CSS frameworks, I performed lean CSS coding.
 * I coded the draggable codes in the scroll part of the products with Javascript.
 
+Live URL : https://recepterzi-digifist.netlify.app
+
 You can find the pictures of the project I coded below.
 
 ![](https://i.hizliresim.com/ccr6t7w.PNG)
